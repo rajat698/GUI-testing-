@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+  <title>CSE565 Assignment 5</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='logo.png') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+  <label for="html">Glad that you are still grading my assignment</label><br>
+
+  <img src="{{ url_for('static', filename='dog3.png') }}" class="icon" />
+
+  <h3>This is a website for CSE565 assignment</h3>
+
+  <div class="form">
+    <input type="text" name="Say Something Random" placeholder="Say Something Random" />
+    
+  </div>
+    <div class="radios">
+      <input type="radio" id="html" name="fav_language" value="Faculty Login">
+      <label for="html">Was it really Random?</label>
+
+      <input type="checkbox" id="Keep my Login Info" name="Keep my Login Info" value="login">
+      <label for="vehicle1"> It was super random</label><br>
+
+      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+      <label for="vehicle1"> Maybe kinda random </label><br> 
+    </div>
+    <br>
+    <a href="{{ url_for('index')}}">
+      <input type="submit" value="Go Back"/>
+    </a>
+    <br>
+
+</body>
