@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+  <title>CSE565 Assignment 5</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='logo.png') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+  <label for="html">Glad that you are still grading my assignment</label><br>
+
+  <img src="{{ url_for('static', filename='dog2.png') }}" class="icon" />
+
+  <h3>CSE565 Assignment GUI Testing</h3>
+
+  <div class="form">
+    <input type="text" name="First Name" placeholder="First Name" />
+    <input type="text" name="Last Name" placeholder="Last Name" />
+    <br>
+    <input type="text" name="Email" placeholder="Email" />
+    <input type="text" name="Password" placeholder="Password" />
+  </div>
+    <div class="radios">
+      <input type="radio" id="html" name="fav_language" value="Faculty Account">
+      <label for="html">Faculty Account</label><br>
+
+      <input type="checkbox" id="Keep my Login Info" name="Keep my Login Info" value="login">
+      <label for="vehicle1"> Remember me</label><br>
+
+      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+      <label for="vehicle1"> Keep my Login Info </label><br> 
+    </div>
+    <br>
+
+    <a href="{{ url_for('signup')}}">
+      <input type="submit" value="Sign Up"/>
+    </a>
+    <br>
+
+    <a href="{{ url_for('index')}}">
+      <input type="submit" value="Go Back"/>
+    </a>
+
+</body>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+  <title>CSE565 Assignment 5</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='logo.png') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+  <label for="html">Glad that you are still grading my assignment</label><br>
+
+  <img src="{{ url_for('static', filename='dog1.png') }}" class="icon" />
+
+  <h3>CSE565 Assignment GUI Testing</h3>
+
+  <div class="form">
+    <input type="text" name="Feeling" placeholder="How are you feeling today?" />
+  </div>
+    <div class="radios">
+      <input type="radio" id="html" name="fav_language" value="Faculty Login">
+      <label for="html">Like this page?</label><br>
+
+      <input type="checkbox" id="Keep my Login Info" name="Keep my Login Info" value="login">
+      <label for="vehicle1"> Stay Signed in</label><br>
+
+      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+      <label for="vehicle1"> Give me full fee wavier </label><br> 
+    </div>
+    <br>
+    <a href="{{ url_for('index')}}">
+      <input type="submit" value="Go back"/>
+    </a>
+    <br>
+</body>
