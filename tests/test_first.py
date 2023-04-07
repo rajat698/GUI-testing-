@@ -1,7 +1,7 @@
 from playwright.sync_api import Page, expect
 import re
 
-website = 'http://34.171.206.146:3200'
+website = 'http://34.171.206.146:3200/'
 url = website[7:]
 
 #Test to check if the website is responsive
@@ -110,13 +110,13 @@ def test_textBox_location(page:Page):
 def test_flow_to_sign_in(page: Page):
     page.goto(website)
     page.get_by_role("button", name="Sign In").click()
-    expect(page).to_have_url(re.compile(f"{url}/signin"))
+    expect(page).to_have_url(re.compile(f"{website}signin"))
 
 #Test to check the FLOW of pages main -> Sign Up
 def test_flow_to_sign_up(page: Page):
     page.goto(website)
     page.get_by_role("button", name="Sign Up").click()
-    expect(page).to_have_url(re.compile(f"{url}/signup"))
+    expect(page).to_have_url(re.compile(f"{url}signup"))
 
 #Test to check the FLOW of pages main -> More Info - > Go Back
 def test_flow_to_more_info(page: Page):
