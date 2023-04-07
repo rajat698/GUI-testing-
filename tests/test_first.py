@@ -74,7 +74,7 @@ def test_textBox_size(page):
     assert size_details['height'] == 50
     assert size_details['width'] == 205.5
 
-#Test to check the location of the radio button on the home page
+#Test to check the LOCATION of the radio button on the home page
 def test_radioButton_location(page: Page):
     page.goto(website)
     checkBox = page.get_by_label("Hello and welcome to grading my assignment")
@@ -84,7 +84,7 @@ def test_radioButton_location(page: Page):
     assert location_details['x'] == 545
     assert location_details['y'] == 521.0625
 
-#Test to check the location of the main image on the sign in page
+#Test to check the LOCATION of the main image on the sign in page
 def test_image_location(page: Page):
     page.goto(website)
     page.get_by_role("button", name="Sign In").click()
@@ -95,7 +95,7 @@ def test_image_location(page: Page):
     assert location_details['x'] == 490
     assert location_details['y'] == 116
 
-#Test to check the location of the 'Last Name' text field on the sign up page
+#Test to check the LOCATION of the 'Last Name' text field on the sign up page
 def test_textBox_location(page:Page):
     page.goto(website)
     page.get_by_role("button", name="Sign Up").click()
@@ -106,19 +106,19 @@ def test_textBox_location(page:Page):
     assert location_details['x'] == 641.7578125
     assert location_details['y'] == 212
 
-# Test to check the flow of pages main -> Sign In
+# Test to check the FLOW of pages main -> Sign In
 def test_flow_to_sign_in(page: Page):
     page.goto(website)
     page.get_by_role("button", name="Sign In").click()
     expect(page).to_have_url(re.compile(f"{url}/signin"))
 
-#Test to check the flow of pages main -> Sign Up
+#Test to check the FLOW of pages main -> Sign Up
 def test_flow_to_sign_up(page: Page):
     page.goto(website)
     page.get_by_role("button", name="Sign Up").click()
     expect(page).to_have_url(re.compile(f"{url}/signup"))
 
-#Test to check the flow of pages main -> More Info - > Go Back
+#Test to check the FLOW of pages main -> More Info - > Go Back
 def test_flow_to_more_info(page: Page):
     page.goto(website)
     page.get_by_role("button", name="More Info").click()
